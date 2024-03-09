@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function doblular(n) {
+        return n * 2;
+      }
+      let arr = [10, 20, 30, 40, 50];
+      let brr = [];
+      //   arr.forEach((element) => {
+      //     let result = doblular(element);
+      //     brr.push(result);
+      //   });
+      brr = arr.map(doblular);
+      document.write(arr + "<br>" + brr);
+    </script>
+  </head>
+  <body></body>
+</html>
