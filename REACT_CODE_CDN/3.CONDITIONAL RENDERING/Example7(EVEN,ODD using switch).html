@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>never use it</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function getNumber() {
+        let arr = [2, 5, 6, 8, 67, 43, 12, 34, 67, 81];
+        let index = Math.floor(Math.random() * arr.length);
+        return arr[index];
+      }
+
+      function MyApp() {
+        let randNum = getNumber();
+        let mesg;
+        switch (randNum % 2 == 0) {
+          case true:
+            mesg = <b>Even number</b>;
+            break;
+          default:
+            mesg = <b>Odd number</b>;
+        }
+
+        return (
+          <div>
+            <p>
+              Random number is <b>{randNum}</b>
+            </p>
+            <span>It is {mesg} number</span>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<MyApp />, document.querySelector("#root"));
+    </script>
+  </body>
+</html>

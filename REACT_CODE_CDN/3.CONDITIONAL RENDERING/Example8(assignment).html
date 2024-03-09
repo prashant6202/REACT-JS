@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function getNumber() {
+        let arr = [1, 2, 45, 6, 67, 43, 5, 34, 67, 81];
+        let index = Math.floor(Math.random() * arr.length);
+        return arr[index];
+      }
+
+      function MyApp() {
+        let randNum = getNumber();
+
+        let mess;
+        if (randNum == 6) {
+          mess = (
+            <p>
+              <h3>Congratulations ! you won </h3>
+              <a href="https://imgflip.com/i/8c36ol">
+                <img
+                  src="https://i.imgflip.com/8c36ol.jpg"
+                  title="made at imgflip.com"
+                />
+              </a>
+            </p>
+          );
+        } else {
+          mess = <small>Sorry ! better luck next time</small>;
+        }
+
+        let myDiv = (
+          <div>
+            <p>
+              You got the number <b>{randNum}</b>
+            </p>
+            {mess}
+          </div>
+        );
+        return myDiv;
+      }
+
+      ReactDOM.render(<MyApp />, document.querySelector("#root"));
+    </script>
+  </body>
+</html>

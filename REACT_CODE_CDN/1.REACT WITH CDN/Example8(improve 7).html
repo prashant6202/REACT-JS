@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>h1 and para direct return in my div</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function MyElement() {
+        let myDiv = React.createElement(
+          "div",
+          {
+            style: { background: " rgb(12, 243, 99)" },
+          },
+          React.createElement("h1", null, "What is React ?"),
+          React.createElement("p", null, "React is component base javaScript.")
+        );
+        return myDiv;
+      }
+
+      ReactDOM.render(
+        React.createElement(MyElement),
+        document.querySelector("#root")
+      );
+    </script>
+  </body>
+</html>

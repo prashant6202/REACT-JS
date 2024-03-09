@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>h1,para,ul in main div</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function MyElement() {
+        let heading = React.createElement("h1", null, "Contact List");
+        let myUl = React.createElement(
+          "ul",
+          null,
+          React.createElement(
+            "li",
+            { style: { color: "red" } },
+            React.createElement(
+              "span",
+              { style: { fontWeight: "bold" } },
+              "Mr.Sachin Kapoor"
+            ),
+            React.createElement(
+              "p",
+              null,
+              React.createElement(
+                "a",
+                { href: "ksachin" },
+                "ksachin90@gmail.com"
+              )
+            )
+          ),
+          React.createElement(
+            "li",
+            { style: { color: "red" } },
+            React.createElement(
+              "span",
+              { style: { fontWeight: "bold" } },
+              "Mr.Pramjeet Singh"
+            ),
+            React.createElement(
+              "p",
+              null,
+              React.createElement(
+                "a",
+                { href: "pramjeet" },
+                "pramjeet123@gmail.com"
+              )
+            )
+          ),
+          React.createElement(
+            "li",
+            { style: { color: "red" } },
+            React.createElement(
+              "span",
+              { style: { fontWeight: "bold" } },
+              "Prashant Yadav"
+            ),
+            React.createElement(
+              "p",
+              null,
+              React.createElement(
+                "a",
+                { href: "ksachin" },
+                "prashantyadav43@gmail.com"
+              )
+            )
+          )
+        );
+        let myDiv = React.createElement("div", null, heading, myUl);
+        return myDiv;
+      }
+
+      ReactDOM.render(
+        React.createElement(MyElement),
+        document.querySelector("#root")
+      );
+    </script>
+  </body>
+</html>

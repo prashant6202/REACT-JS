@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>React Coomponent code is reuseable</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function MyElement() {
+        let myElement = React.createElement("h1", null, "React Rocks");
+        return myElement;
+      }
+
+      let myDiv = document.querySelector("#root");
+      let myHeading = React.createElement(MyElement);
+      ReactDOM.render(myHeading, myDiv);
+    </script>
+  </body>
+</html>

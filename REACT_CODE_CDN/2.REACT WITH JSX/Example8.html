@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jsx sum</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function MyApp() {
+        let heading = <h1>Contact List</h1>;
+        let myUl = (
+          <ul>
+            <li>Mr.Sachin kapoor</li>
+            <li>Mr.Pramjeet Singh</li>
+            <li>Mr.Prashant Yadav</li>
+          </ul>
+        );
+
+        let myDiv = (
+          <div>
+            {heading}
+            {myUl}
+          </div>
+        );
+        return myDiv;
+      }
+
+      ReactDOM.render(<MyApp />, document.querySelector("#root"));
+    </script>
+  </body>
+</html>

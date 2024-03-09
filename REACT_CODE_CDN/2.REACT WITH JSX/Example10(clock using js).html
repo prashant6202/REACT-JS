@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function MyClock() {
+        let myDiv = document.querySelector("#root");
+        let today = new Date();
+        myDiv.innerHTML = `<h1>My clock component</h1>`;
+        myDiv.innerHTML += `time is<b> ${today.toLocaleString()}</b>`;
+      }
+      setInterval(MyClock, 1000);
+    </script>
+  </body>
+</html>
