@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>get property</title>
+    <script>
+      class Person {
+        constructor(firstname, lastName) {
+          this.firstname = firstname;
+          this.lastName = lastName;
+        }
+        get fullName() {
+          return `${this.firstname + " " + this.lastName}`;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let p = new Person("Prashant", "yadav");
+      document.write(p.fullName);
+    </script>
+  </body>
+</html>

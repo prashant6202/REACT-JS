@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spread example</title>
+    <script>
+      function add(a, b) {
+        c = a + b;
+        document.write(`Their sum is ${c}`);
+      }
+      let arr = [10, 20];
+      add(...arr); // arr call krega toString and arr[0] pass in a, arr[1] pass in b
+    </script>
+  </head>
+  <body></body>
+</html>

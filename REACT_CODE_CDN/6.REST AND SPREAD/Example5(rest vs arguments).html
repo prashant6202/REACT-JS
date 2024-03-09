@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rest vs arguments</title>
+    <script>
+      function show1(...args) {
+        document.write("Using rest parameters<br>");
+        args.forEach((element) => {
+          document.write(`${element}<br>`);
+        });
+      }
+
+      function show2() {
+        document.write("Using arguments parameters<br>");
+        arguments.forEach((element) => {
+          document.write(`${element}<br>`);
+        });
+      }
+
+      show1(10, 20, 30);
+      show2(10, 20, 30);
+    </script>
+  </head>
+  <body></body>
+</html>

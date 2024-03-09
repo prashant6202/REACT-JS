@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>copy the array using spread</title>
+    <script>
+      let arr = [10, 20, 30];
+      arr.push("40");
+      let crr = [50, 60, 70];
+      let brr = [...arr, 3, 4, 5, 6, ...crr, 4, 5, 6, 7, 8];
+
+      brr.forEach((x) => {
+        document.write(`${x} <br>`);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

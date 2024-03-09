@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>static method and changing company</title>
+    <script>
+      class Emp {
+        static companyName = "Google";
+        constructor(empId, empName, empSal) {
+          this.empId = empId;
+          this.empName = empName;
+          this.empSal = empSal;
+        }
+        static changeCompany(cmp) {
+          this.companyName = cmp;
+        }
+        show() {
+          document.write(
+            `Employe id ${this.empId}<br>Employee name is ${this.empName}<br> Employee salary is ${this.empSal}<br>Employee company is ${Emp.companyName}<br><br>`
+          );
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let e1 = new Emp(101, "Prashant", 100000);
+      let e2 = new Emp(102, "Karuna", 40000);
+      e1.show();
+      e2.show();
+      Emp.changeCompany("Amazon");
+      document.write("After changeing company<br>");
+      e1.show();
+      e2.show();
+    </script>
+  </body>
+</html>

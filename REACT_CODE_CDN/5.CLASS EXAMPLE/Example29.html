@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>static instance variable</title>
+    <script>
+      class Emp {
+        static companyName = "Google";
+        constructor(empId, empName, empSal) {
+          this.empId = empId;
+          this.empName = empName;
+          this.empSal = empSal;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let e1 = new Emp(101, "Prashant", 100000);
+
+      document.write(
+        `Employe id ${e1.empId}<br>Employee name is ${e1.empName}<br> Employee salary is ${e1.empSal} <br>Employee company is ${Emp.companyName}<br><br>`
+      );
+      let e2 = new Emp(102, "Karuna", 40000);
+
+      document.write(
+        `Employe id ${e2.empId}<br>Employee name is ${e2.empName}<br> Employee salary is ${e2.empSal}<br>Employee company is ${Emp.companyName}<br><br>`
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>3 object but same empId of all this is problem</title>
+    <script>
+      class Emp {
+        constructor() {
+          this.empId = 101;
+          this.empName = "Prashant";
+          this.empSal = 333333;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let e1 = new Emp();
+      let e2 = new Emp();
+      let e3 = new Emp();
+      document.write(
+        `Employe id ${e1.empId}<br>Employee name is ${e1.empName}<br> Employee salary is ${e1.empSal}<br>`
+      );
+      document.write(
+        `Employe id ${e2.empId}<br>Employee name is ${e2.empName}<br> Employee salary is ${e2.empSal}<br>`
+      );
+      document.write(
+        `Employe id ${e3.empId}<br>Employee name is ${e3.empName}<br> Employee salary is ${e3.empSal}<br>`
+      );
+    </script>
+  </body>
+</html>

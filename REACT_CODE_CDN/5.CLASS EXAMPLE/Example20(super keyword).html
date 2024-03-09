@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      parent class me defalut constructor hai so we must declare the super() in
+      the child class
+    </title>
+    <script>
+      class Vehicle {
+        accelerate() {
+          document.write("accelerating...");
+        }
+      }
+
+      class Car extends Vehicle {
+        constructor() {
+          //this code will give error because we must write super()
+          //super();   // likhna compalsory hai
+          document.write("Creating car<br>");
+        }
+
+        reverse() {
+          document.write("reversing...");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let bmw = new Car();
+      bmw.reverse();
+      document.write("<br>");
+      bmw.accelerate();
+    </script>
+  </body>
+</html>

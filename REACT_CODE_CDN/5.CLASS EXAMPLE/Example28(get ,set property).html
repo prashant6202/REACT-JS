@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>get,set property</title>
+    <script>
+      class Person {
+        constructor(firstname, lastName) {
+          this.firstname = firstname;
+          this.lastName = lastName;
+        }
+        get fullName() {
+          return `${this.firstname + " " + this.lastName}`;
+        }
+        set fullName(name) {
+          let arr = name.split(" ");
+          this.firstname = arr[0];
+          this.lastName = arr[1];
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let p = new Person("Prashant", "yadav");
+      document.write(`full name is ${p.fullName}`);
+      p.fullName = "Amit rai";
+      document.write(`<br>full name is ${p.fullName}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      marksheet me jo data hai oo sb string bn jayega and concatinate
+    </title>
+    <script>
+      function marksheet(...args) {
+        let sum = 0;
+        for (let x of args) {
+          sum += x;
+        }
+        document.write(`Student name is ${name}, Marks :${sum}<br>`);
+      }
+
+      marksheet("Naveen", 10, 20);
+      marksheet("Prashant", 10, 20, 30);
+      marksheet("Karuna", 10, 20, 30, 40, 50, 60);
+    </script>
+  </head>
+  <body></body>
+</html>

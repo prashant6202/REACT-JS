@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>destructuring  in the nested array</title>
+    <script>
+      let arr = [20, "Prashant", 4000, ["Btech", "MBA", "Phd"]];
+      let [age, name, salary, [deg1, deg2, deg3]] = arr;
+      document.write(`age is ${age}<br>`);
+      document.write(`name is ${name}<br>`);
+      document.write(`salary is ${salary}<br>`);
+      document.write(`deg1 is ${deg1}<br>`);
+      document.write(`deg2 is ${deg2}<br>`);
+      document.write(`deg3 is ${deg3}<br>`);
+    </script>
+  </head>
+  <body></body>
+</html>

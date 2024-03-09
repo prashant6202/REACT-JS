@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> </title>
+    <script>
+      class Emp {
+        constructor(name, salary) {
+          this.name = name;
+          this.salary = salary;
+        }
+        toString() {
+          return `${this.name},${this.salary}`;
+        }
+      }
+      class Manager extends Emp {
+        constructor(name, salary) {
+          super(name, salary);
+          this.bonus = 1000;
+        }
+        toString() {
+          return `${super.toString()},${this.bonus}`; //this.toString() agr likhenge to Manager ka hi toString bar bar call hoga jinke karn stack full ho jayega run time error
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let m1 = new Manager("Amit", 3000);
+      document.write(m1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>inheritance car to vehicle</title>
+    <script>
+      class Vehicle {
+        constructor() {
+          document.write("Creating vehicle<br>");
+        }
+        accelerate() {
+          document.write("accelerating...");
+        }
+      }
+
+      class Car extends Vehicle {
+        constructor() {
+          super();
+          document.write("Creating car<br>");
+          super();
+        }
+        reverse() {
+          document.write("reversing...");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let bmw = new Car();
+      bmw.reverse();
+      document.write("<br>");
+      bmw.accelerate();
+    </script>
+  </body>
+</html>

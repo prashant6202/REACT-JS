@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rest vs arguments</title>
+    <script>
+      function show1(...args) {
+        args.push("40");
+        document.write("Using rest parameters<br>");
+        for (let index = 0; index < args.length; index++) {
+          document.write(`${args[index]}<br>`);
+        }
+      }
+
+      function show2() {
+        document.write("Using arguments parameters<br>");
+        arguments.push("40"); // arguments like array but not array
+
+        for (let index = 0; index < arguments.length; index++) {
+          document.write(`${arguments[index]}<br>`);
+        }
+      }
+
+      show1(10, 20, 30);
+      show2(10, 20, 30);
+    </script>
+  </head>
+  <body></body>
+</html>

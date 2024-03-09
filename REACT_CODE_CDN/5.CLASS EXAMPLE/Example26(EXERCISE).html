@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>area and volume of Cylinder</title>
+    <script>
+      class Circle {
+        constructor(rad) {
+          this.rad = rad;
+        }
+        area() {
+          return `${Math.PI * Math.pow(this.rad, 2)}`;
+        }
+      }
+
+      class Cylinder extends Circle {
+        constructor(rad, height) {
+          super(rad);
+          this.height = height;
+        }
+        area() {
+          return `${2 * super.area() + 2 * Math.PI * this.rad * this.height}`;
+        }
+        volume() {
+          return `${super.area() * this.height}`;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let cy = new Cylinder(10, 20);
+      document.write(`area is ${cy.area()}<br>`);
+      document.write(`volume is ${cy.volume()}<br>`);
+    </script>
+  </body>
+</html>

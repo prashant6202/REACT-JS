@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>private variable by #</title>
+    <script>
+      class Data {
+        a = 10;
+        #b = 20;
+        show() {
+          document.write(`a=${this.a},b=${this.b}`);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let d = new Data();
+      d.show();
+    </script>
+  </body>
+</html>

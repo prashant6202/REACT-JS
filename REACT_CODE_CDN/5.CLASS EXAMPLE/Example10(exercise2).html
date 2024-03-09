@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Method</title>
+    <script>
+      class Emp {
+        constructor(empId, empName, empSal) {
+          this.empId = empId;
+          this.empName = empName;
+          this.empSal = empSal;
+        }
+        show() {
+          document.write(
+            `Employe id ${this.empId}<br>Employee name is ${this.empName}<br> Employee salary is ${this.empSal}<br><br>`
+          );
+        }
+
+        raisSalary(percent) {
+          this.empSal += (this.empSal * percent) / 100;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let e1 = new Emp(101, "Prashant", 100000);
+      let e2 = new Emp(102, "Anil", 40000);
+      document.write("Before incrementing <br>");
+      e1.show();
+      e2.show();
+      e1.raisSalary(3);
+      e2.raisSalary(5);
+      document.write("<b>After incrementing</b> <br><br>");
+      e1.show();
+      e2.show();
+    </script>
+  </body>
+</html>

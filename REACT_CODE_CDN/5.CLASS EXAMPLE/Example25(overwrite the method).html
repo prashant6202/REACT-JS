@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> </title>
+    <script>
+      class Emp {
+        constructor(name, salary) {
+          this.name = name;
+          this.salary = salary;
+        }
+        toString() {
+          return `${this.name},${this.salary}`;
+        }
+        raiseIncome() {
+          this.salary = this.salary + this.salary * 0.1;
+        }
+      }
+      class Manager extends Emp {
+        constructor(name, salary) {
+          super(name, salary);
+          this.bonus = 1000;
+        }
+        raiseIncome() {
+          super.raiseIncome();
+          this.bonus = this.bonus + this.bonus * 0.1;
+        }
+        toString() {
+          return `${super.toString()},${this.bonus}`;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let m1 = new Manager("Amit", 3000);
+      document.write(m1);
+      document.write("<br>after incrementing<br>");
+      m1.raiseIncome();
+      document.write(m1);
+    </script>
+  </body>
+</html>

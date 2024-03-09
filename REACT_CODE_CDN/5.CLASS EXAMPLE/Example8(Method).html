@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Method</title>
+    <script>
+      class Emp {
+        constructor(empId, empName, empSal) {
+          this.empId = empId;
+          this.empName = empName;
+          this.empSal = empSal;
+        }
+
+        show() {
+          document.write(
+            `Employe id ${this.empId}<br>Employee name is ${this.empName}<br> Employee salary is ${this.empSal}<br><br>`
+          );
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let e1 = new Emp(101, "Prashant", 100000);
+      e1.show();
+      let e2 = new Emp();
+      e2.show();
+    </script>
+  </body>
+</html>
