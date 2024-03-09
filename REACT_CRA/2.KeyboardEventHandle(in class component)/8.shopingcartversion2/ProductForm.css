@@ -1,0 +1,18 @@
+.ProductForm {
+  color: #1a4144;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.ProductForm button {
+  background-color: #1a4144;
+  color: white;
+  width: 300px;
+  font-size: 80%;
+  border-radius: 10px;
+}
+.ProductForm input {
+  border-radius: 10px;
+  width: 300px;
+  font-size: 80%;
+  height: 20px;
+}
